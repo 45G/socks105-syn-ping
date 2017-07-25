@@ -196,7 +196,7 @@ int main(int argc, char *argv[])
 	
 	gettimeofday(&end, NULL);
 	
-	time_diff = end.tv_sec * USECS_PER_SEC + end.tv_usec - begin.tv_sec * USECS_PER_SEC - begin.tv_usec;
+	time_diff = (uint64_t)end.tv_sec * USECS_PER_SEC + end.tv_usec - (uint64_t)begin.tv_sec * USECS_PER_SEC - begin.tv_usec;
 	
 	printf("%.2f ms\n", (float)time_diff / 1000);
 		
