@@ -168,7 +168,7 @@ int main(int argc, char *argv[])
 				stage = RECV_FREP;
 			
 			socks105_initial_reply_delete(irep);
-			fprintf(stderr, "got irep\n");
+			//fprintf(stderr, "got irep\n");
 			
 		}
 		else if (stage == RECV_FREP)
@@ -189,7 +189,7 @@ int main(int argc, char *argv[])
 				fprintf(stderr, "frep fail: %d\n", (int)frep->frep_type);
 			
 			socks105_final_reply_delete(frep);
-			fprintf(stderr, "got frep\n");
+			//fprintf(stderr, "got frep\n");
 			break;
 		}
 	}
